@@ -4,9 +4,8 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)  # Allow CORS for all routes
+CORS(app) 
 
-# Load the trained model and scaler
 with open('parkinsons_disease_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
@@ -14,7 +13,7 @@ with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return "Hello, World"
 
 @app.route('/predict', methods=['POST'])
 def predict():
