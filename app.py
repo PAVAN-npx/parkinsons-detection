@@ -13,7 +13,7 @@ with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 @app.route('/')
 def home():
-    return "Hello, World"
+    return "Hello, World@"
 
 @app.route('/predict', methods=['POST'])
 def predict():
